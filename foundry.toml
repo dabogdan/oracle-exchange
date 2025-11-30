@@ -1,0 +1,10 @@
+[profile.default]
+src = 'contracts'
+test = 'test/foundry'
+libs = ['lib']
+
+# Add remappings to tell the compiler where to find libraries.
+remappings = [
+    'forge-std/=lib/forge-std/src/',
+    '@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/'
+]
