@@ -374,7 +374,7 @@ contract StableOracleExchange is AccessControl, Pausable, ReentrancyGuard {
         uint256 rate = rates[tokenIn][tokenOut];
         if (rate == 0) revert RateNotSet(tokenIn, tokenOut);
 
-        // 🔥 USE DECIMAL-AWARE OUTPUT COMPUTATION
+        // USE DECIMAL-AWARE OUTPUT COMPUTATION
         uint256 amountOut = _computeAmountOutDecimals(tokenIn, tokenOut, amountIn, rate);
 
         if (amountOut == 0) revert ZeroAmount();
